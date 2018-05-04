@@ -1,0 +1,33 @@
+[
+    {
+        "FeedType": "Twitter",
+	    "KeywordSet":["Lego","Tesla"], // KeywordSet is mandatory for any FeedType. It is either a single word or array of words.
+        "Location":"Ohio", // An optional parameter, in conjunction with Radius parameter, can be used to filter tweets within a given radius. Accepts only place name when fetch is 0.
+        "Radius":"200mi",
+        "Fetch": "0", // Valid only in case of twitter, 1-Uses API to fetch tweets, 0-Uses Scraper to fetch tweets.
+        "BeginDate":"2018-01-01", // Valid only in case of twitter when fetch is 0. Occurs in conjunction with EndDate.
+        "EndDate":"2018-03-27",	 // Valid only in case of twitter when fetch is 0. Occurs in conjunction with BeginDate.
+        "Limit": "100", // Number of tweets to fetch.
+	    "Language":"en"
+  },
+  {
+        "FeedType": "Youtube",
+	    "KeywordSet":["Lego"],
+        "Dump": "1", // Valid only in case of youtube. 1-Will parse the API response into a CSV, 0-Will parse the API response into a CSV and stores the raw API response into file named 'youtube_dump'
+        "Location": "Dallas", // An optional parameter, in conjunction with Radius parameter, defines a circular geographic area and also restricts a search to videos that specify, in their metadata, a geographic location that falls within that area. Accepts either place name or geo coordinates.
+        "Radius":"350mi",  // The Radius parameter, in conjunction with the location parameter, defines a circular geographic area. Does not support Radius parameter values larger than 1000 kilometers.
+		"Language":"en",
+        "PublishedAfter": "2018-01-01T00:00:00Z", // Valid only in case of youtube. The publishedAfter parameter indicates that the API response should only contain resources created at or after the specified time. The value is an RFC 3339 formatted date-time value.
+        "PublishedBefore": "2018-02-01T00:00:00Z" // Valid only in case of youtube. The publishedBefore parameter indicates that the API response should only contain resources created before or at the specified time. The value is an RFC 3339 formatted date-time value.
+  },
+  {
+        "FeedType": "Twitter",
+		"KeywordSet":["Lego"],
+        "Location":"Ohio", // // An optional parameter, in conjunction with Radius parameter, can be used to filter tweets within a given radius. Accepts either place name or geo coordinates when fetch is 1.
+        "Radius":"200mi",
+        "Fetch": "1",
+        "Until": "2017-01-01", // Valid only in case of twitter when fetch is 1. Can be used to filter tweets created before the given date. Date should be formatted as YYYY-MM-DD. Twitter standard API currently supports a lookback of 7 days.
+        "ResultType": "recent", // Optional. Specifies what type of search results you would prefer to receive.  mixed : Include both popular and real time results in the response. recent : return only the most recent results in the response.  popular : return only the most popular results in the response.
+    	"Language":"en"
+  }
+]

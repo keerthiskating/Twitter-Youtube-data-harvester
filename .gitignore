@@ -1,0 +1,8 @@
+reports
+.pytest_cache
+.idea
+.coverage
+*.pyc
+Credentials.json
+out
+sample.csv

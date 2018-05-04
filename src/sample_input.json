@@ -1,0 +1,12 @@
+[
+    {
+        "FeedType": "Twitter",
+		"KeywordSet":["iphone"],
+        "Location":"Hempstead,NY",
+        "Radius":"20mi",
+        "Fetch": "0",
+        "BeginDate":"2017-04-03",
+        "EndDate":"2018-04-21",
+		"Language":"en"
+    }
+]
