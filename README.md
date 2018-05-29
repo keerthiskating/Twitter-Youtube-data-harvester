@@ -60,4 +60,3 @@ SentimentAnalysisWrapper.py -h
 
 ###### Notes:
 1. When using twitterscraper to fetch tweets, please be aware of [Twitter terms of service](https://twitter.com/en/tos). It is intended to use it only for demo or experimentation purposes.
-2. 'youtube-comment-replies', a branch in this repository, can be used if we are interested in fetching replies to each comment on a youtube video. The master branch doesn't support replies to each comment.
